@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import Sort from '../assets/sort.svg'
 import DropDown from './DropDown'
 

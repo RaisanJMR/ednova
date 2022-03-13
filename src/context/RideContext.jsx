@@ -15,13 +15,13 @@ export const RideProvider = ({ children }) => {
 
   //   fetch user
   const fetchUser = async () => {
-    const { data } = await axios.get(process.env.USER_URL)
+    const { data } = await axios.get(process.env.REACT_APP_USER_URL)
     setUser(data)
   }
 
   // fetch rides
   const fetchRides = async () => {
-    const { data } = await axios.get(process.env.RIDES_URL)
+    const { data } = await axios.get(process.env.REACT_APP_RIDES_URL)
     setRides(data)
   }
 

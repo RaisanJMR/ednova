@@ -2,7 +2,7 @@ import React from 'react'
 
 function NearestItem({ item }) {
   return (
-    <>
+   
       <div className='nearest-ride'>
         <div className='ride-map'>
           <img src={item.map_url} alt={item.map_url} />
@@ -19,7 +19,7 @@ function NearestItem({ item }) {
             <small className="city">{item.city}</small>
         </div>
       </div>
-    </>
+   
   )
 }
 

@@ -6,8 +6,7 @@ const RideContext = createContext()
 export const RideProvider = ({ children }) => {
   const [user, setUser] = useState({ data: {} })
   const [rides, setRides] = useState([])
- 
-
+  
   useEffect(() => {
     fetchUser()
     fetchRides()
@@ -23,6 +22,7 @@ export const RideProvider = ({ children }) => {
   const fetchRides = async () => {
     const { data } = await axios.get(process.env.REACT_APP_RIDES_URL)
     setRides(data)
+    
   }
 
   return (

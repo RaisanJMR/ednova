@@ -1,4 +1,5 @@
 import { useContext } from 'react'
+import { v4 as uuidv4 } from 'uuid'
 import RideContext from '../context/RideContext'
 function DropDown() {
   const { rides } = useContext(RideContext)
@@ -15,14 +16,18 @@ function DropDown() {
       <div className='select'>
         <select name='states' id='' onChange={handleState}>
           {rides.map((item) => (
-            <option value={item.state}>{item.state}</option>
+            <option value={item.state} key={uuidv4()}>
+              {item.state}
+            </option>
           ))}
         </select>
       </div>
       <div className='select'>
         <select name='city' id='' onChange={handleCity}>
           {rides.map((item) => (
-            <option value={item.city}>{item.city}</option>
+            <option value={item.city} key={uuidv4()}>
+              {item.city}
+            </option>
           ))}
         </select>
       </div>

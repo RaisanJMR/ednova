@@ -1,7 +1,8 @@
-import { useState } from 'react'
+import { useContext } from 'react'
+import RideContext from '../context/RideContext'
+function DropDown() {
+  const { rides } = useContext(RideContext)
 
-function DropDown({ data }) {
-  console.log('from drop down', data)
   const handleState = (e) => {
     console.log(e.target.value)
   }
@@ -13,16 +14,16 @@ function DropDown({ data }) {
       <p>Filters</p>
       <div className='select'>
         <select name='states' id='' onChange={handleState}>
-          <option value='kerala'>Kerala</option>
-          <option value='karnataka'>Karnataka</option>
-          <option value='Tamil nadu'>Tamil Nadu</option>
+          {rides.map((item) => (
+            <option value={item.state}>{item.state}</option>
+          ))}
         </select>
       </div>
       <div className='select'>
         <select name='city' id='' onChange={handleCity}>
-          <option value='abc'>abc</option>
-          <option value='city2'>City2</option>
-          <option value='city3'>City3</option>
+          {rides.map((item) => (
+            <option value={item.city}>{item.city}</option>
+          ))}
         </select>
       </div>
     </div>

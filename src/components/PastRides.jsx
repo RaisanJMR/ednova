@@ -1,10 +1,9 @@
-import { useState, useEffect } from 'react'
-import axios from 'axios'
+import { useContext } from 'react'
+import RideContext from '../context/RideContext'
 
 function PastRides() {
-  useEffect(() => {
-    console.log('from past ride')
-  }, [])
+  const { rides } = useContext(RideContext)
+  
   return <div>PastRides</div>
 }
 

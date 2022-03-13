@@ -1,13 +1,143 @@
-body {
+/* preset */
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
+  background-color: #292929;
+}
+
+
+/* navbar */
+
+.navbar {
+  width: 100vw;
+  height: 84px;
+  color: #ffffff;
+  background-color: #101010;
+}
+.navbar .container {
+  max-width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .container .user {
+  display: flex;
+  justify-content: space-between;
+}
+.navbar .container .user h3 {
+  position: relative;
+  top: 12px;
+  right: 27px;
+}
+.navbar .container img {
+  border-radius: 50%;
+}
+.tabs-container .container {
+  max-width: 90%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.tabs {
+  cursor: pointer;
+  list-style-type: none;
+  margin: 20px 40px 20px 0px;
+  padding-bottom: 6px;
+  color: #d0cbcb;
+}
+.tabs-active {
+  color: #ffffff;
+  border-bottom: 2px solid #ffffff;
+}
+.tabs-content {
+  max-width: 90%;
+  margin: 0 auto;
+}
+.sort-filter {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.sort-filter p {
+  color: #f2f2f2;
+  text-transform: capitalize;
+  margin-left: 10px;
+}
+/* nearest ride item */
+.nearest-ride {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  background-color: #171717;
+  margin: 10px 0;
+  display: flex;
+
+  color: #cfcfcf;
+  padding: 10px;
+}
+.nearest-ride img {
+  border-radius: 5px;
+}
+.ride-details {
+  flex: 1;
+  margin-left: 25px;
+  font-size: 14px;
+}
+.ride-details > p {
+  margin-bottom: 20px;
+}
+.state-city {
+  margin-right: 40px;
+  margin-top: 10px;
+  color: #cfcfcf;
+  font-size: 13px;
+}
+.state,
+.city {
+  background-color: rgba(0, 0, 0, 56%);
+  margin-right: 10px;
+  padding: 4px 10px;
+  border-radius: 10px;
+}
+
+/* drop down */
+.drop-down {
+  width: 228px;
+  height: 190px;
+  background-color: #131313;
+  border-radius: 5px;
+  position: absolute;
+  top: 140px;
+  right: 55px;
+  z-index: 10;
+  padding: 15px;
+}
+.drop-down p {
+  color: #a5a5a5;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #a5a5a5;
+}
+.select {
+  width: 100%;
+}
+.drop-down select {
+  width: 100%;
+  color: #ffffff;
+  background: #232323;
+  outline: 0;
+  border: 0;
+  padding: 5px;
+  margin: 10px 0px 10px 0px;
+  border-radius: 5px;
 }

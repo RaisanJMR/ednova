@@ -6,7 +6,7 @@ const RideContext = createContext()
 export const RideProvider = ({ children }) => {
   const [user, setUser] = useState({ data: {} })
   const [rides, setRides] = useState([])
-  const [stationCode, setStationCode] = useState('')
+ 
 
   useEffect(() => {
     fetchUser()
@@ -15,14 +15,13 @@ export const RideProvider = ({ children }) => {
 
   //   fetch user
   const fetchUser = async () => {
-    const { data } = await axios.get('https://assessment.api.vweb.app/user')
-    setStationCode(data.station_code)
+    const { data } = await axios.get(process.env.USER_URL)
     setUser(data)
   }
 
   // fetch rides
   const fetchRides = async () => {
-    const { data } = await axios.get('https://assessment.api.vweb.app/rides')
+    const { data } = await axios.get(process.env.RIDES_URL)
     setRides(data)
   }
 
